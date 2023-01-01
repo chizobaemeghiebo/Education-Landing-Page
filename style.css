@@ -133,10 +133,17 @@ img {
 
   background-color: #fff3e4;
   min-height: 100vh;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .header {
-  position: relative;
   justify-content: space-between;
   padding: 1rem 0;
 }
@@ -152,7 +159,7 @@ img {
 }
 
 .header ul li {
-  padding-right: 0.6rem;
+  padding-left: 0.6rem;
 }
 
 .header .cta {
@@ -173,14 +180,17 @@ img {
 }
 
 /* section-a */
+.section-a {
+  margin-bottom: 4rem;
+}
+
 .section-a .text {
-  margin-top: 10rem;
-  width: 40%;
+  width: 70%;
 }
 
 .section-a h1 {
   color: var(--clr--primary);
-  /* font-size: 2.5rem; */
+  font-size: 3em;
 }
 
 .section-a .cta {
@@ -201,7 +211,6 @@ img {
 }
 
 .section-b .brands img {
-  /* background: transparent;*/
   width: 40%;
 }
 
@@ -620,6 +629,11 @@ img {
   .nav.flex ul {
     position: absolute;
     opacity: 0;
+    flex-direction: column;
+  }
+
+  .section-a .text {
+    width: 60%;
   }
 }
 
@@ -628,7 +642,7 @@ img {
     position: absolute;
     opacity: 1;
     pointer-events: all;
-    right: 0;
+    right: 1rem;
   }
 
   .header .menu .close {
@@ -639,10 +653,13 @@ img {
     display: block;
     background-color: var(--clr--light);
     opacity: 0;
-    top: 4rem;
+    top: 0;
     right: 0;
-    padding: 1rem 5rem;
-    transition: opacity 500ms ease-in-out;
+    bottom: 0;
+    padding: 4rem 2rem 0 1rem;
+    text-align: center;
+    /* width: 0%; */
+    transition: all 350ms ease-in-out;
   }
 
   .section-b .flex,
@@ -653,6 +670,10 @@ img {
 
   .header .cta {
     display: none;
+  }
+
+  .section-a h1 {
+    font-size: 2em;
   }
 
   .section-a .text {
@@ -714,5 +735,9 @@ img {
 
   .footer .logo {
     width: 40%;
+  }
+
+  .footer form button {
+    margin-top: 1rem;
   }
 }

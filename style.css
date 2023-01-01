@@ -277,7 +277,6 @@ img {
 
 .section-c .img img {
   border-radius: 1rem;
-  /* width: 50%; */
 }
 
 .section-c .img.flex {
@@ -658,7 +657,6 @@ img {
     bottom: 0;
     padding: 4rem 2rem 0 1rem;
     text-align: center;
-    /* width: 0%; */
     transition: all 350ms ease-in-out;
   }
 

@@ -5,7 +5,6 @@ const nav = document.querySelector('.ul')
 const main = document.querySelector('body')
 main.addEventListener('click', (e) => {
   if (e.target !== open && e.target !== close) {
-    console.log('wtf')
     nav.style.opacity = '0'
     close.style.display = 'none'
     open.style.display = 'block'

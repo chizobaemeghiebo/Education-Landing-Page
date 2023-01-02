@@ -11,12 +11,12 @@
   --clr--primary: #2f327d;
   --accent--secondary: #65daff;
   --section--padding: 4rem;
+  --font-size: 1.5rem;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  color: var(--clr--dark);
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--font-size);
 }
 
 /* general */
@@ -52,15 +52,19 @@ img {
   align-items: center;
 }
 
+.grid {
+  display: grid;
+}
+
 .container {
-  width: 80%;
-  max-width: 1100px;
+  width: 90%;
+  /* max-width: 1100px; */
   margin: 0 auto;
 }
 
 .container2 {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1000px;
   width: 80%;
 }
 
@@ -123,24 +127,17 @@ img {
   width: 20%;
 }
 
+.menu {
+  position: absolute;
+  opacity: 0;
+}
+
 /* main */
 
 .main {
-  background-image: url('https://media.istockphoto.com/photos/portrait-of-happy-lazy-little-girl-covering-head-with-book-and-to-picture-id1213375869?b=1&k=20&m=1213375869&s=170667a&w=0&h=tIdYk9Ku_1C2hmlxywVZcAbLRjifDgWJlGmGHCstimw=');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  background-color: #fff3e4;
+  background-color: #fff2e1;
   min-height: 100vh;
   flex-direction: column;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 
 .header {
@@ -159,20 +156,16 @@ img {
 }
 
 .header ul li {
-  padding-left: 0.6rem;
+  padding-left: 1rem;
+  font-size: 1.2rem;
 }
 
 .header .cta {
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav.flex ul {
   color: var(--clr--primary);
-  font-weight: bold;
-}
-
-.nav.flex ul a {
-  padding-bottom: 0.2rem;
 }
 
 .nav.flex ul a:hover {
@@ -180,17 +173,23 @@ img {
 }
 
 /* section-a */
-.section-a {
-  margin-bottom: 4rem;
+
+.section-a .grid {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  align-items: flex-start;
 }
 
 .section-a .text {
-  width: 70%;
+  margin-top: 4rem;
+}
+
+.section-a img {
+  width: 75%;
 }
 
 .section-a h1 {
   color: var(--clr--primary);
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 .section-a .cta {
@@ -210,12 +209,14 @@ img {
   justify-content: center;
 }
 
-.section-b .brands img {
-  width: 40%;
+.section-b .brands {
+  gap: 1.5rem;
+  margin-top: -4rem;
 }
 
 .section-b {
   padding: var(--section--padding) 0;
+  text-align: center;
 }
 
 .section-b .support {
@@ -223,18 +224,23 @@ img {
   justify-content: center;
 }
 
-.section-b .new-features {
+.section-b .showcase {
   flex-direction: column;
-  gap: 5rem;
 }
 
-.section-b .new-features .text {
-  text-align: center;
-}
-
-.section-b .slide {
+.section-b .grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  align-items: stretch;
+  margin-top: 5rem;
+}
+
+.section-b .grid div > :nth-child(2) {
+  margin: 3rem 0 2rem;
+  font-size: 1rem;
+}
+
+.section-b .grid div p:last-child {
+  font-size: 0.9rem;
 }
 
 .section-b .slide > div {

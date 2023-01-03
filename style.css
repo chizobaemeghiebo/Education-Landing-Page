@@ -174,17 +174,19 @@ img {
 
 /* section-a */
 
-.section-a .grid {
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  align-items: flex-start;
+.section-a .container.flex {
+  align-items: center;
+  margin-top: 5rem;
+  height: 80vh;
 }
 
-.section-a .text {
-  margin-top: 4rem;
+.section-a .container div:nth-child(2) {
+  display: flex;
+  align-self: flex-end;
 }
 
 .section-a img {
-  width: 75%;
+  width: 70%;
 }
 
 .section-a h1 {

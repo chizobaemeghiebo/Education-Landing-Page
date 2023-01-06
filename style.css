@@ -58,7 +58,6 @@ img {
 
 .container {
   width: 90%;
-  /* max-width: 1100px; */
   margin: 0 auto;
 }
 
@@ -71,21 +70,16 @@ img {
 .btn {
   display: inline-block;
   background-color: transparent;
-  padding: 0.5rem 1.5rem;
-  border-radius: 100px;
+  padding: 0.8rem 1.7rem;
+  border-radius: 3rem;
   text-align: center;
   font-size: small;
+  cursor: pointer;
 }
 
 .btn-transparent {
   background-color: transparent;
   border: 2px solid var(--clr--light);
-}
-
-.btn-transparent:hover,
-.btn-yellow:hover {
-  transform: scale(0.8);
-  transition: 200ms ease-in;
 }
 
 .btn-yellow {
@@ -107,13 +101,23 @@ img {
 .btn-light {
   background-color: var(--clr--light);
   color: var(--accent--primary);
+  position: relative;
+
+  z-index: 1;
 }
 
-.btn-light:hover,
-.btn-clr:hover {
-  transform: scaleX(1.2);
-  transition: 200ms ease-in;
+.btn-light::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 3rem;
+  z-index: -1;
 }
+
 .section-b .fa-solid {
   color: var(--clr--light);
   text-align: center;
@@ -207,18 +211,18 @@ img {
 
 /* brands */
 
-.section-b .brands {
-  justify-content: center;
-}
-
-.section-b .brands {
-  gap: 1.5rem;
-  margin-top: -4rem;
-}
-
 .section-b {
   padding: var(--section--padding) 0;
   text-align: center;
+  color: var(--clr--primary);
+}
+
+.section-b .brands {
+  justify-content: space-evenly;
+}
+
+.brands img {
+  width: 50%;
 }
 
 .section-b .support {

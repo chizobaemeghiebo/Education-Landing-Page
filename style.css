@@ -12,11 +12,14 @@
   --accent--secondary: #65daff;
   --section--padding: 4rem;
   --font-size: 1.5rem;
+
+  --text-clr: #696984;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   font-size: var(--font-size);
+  color: var(--text-clr);
 }
 
 /* general */
@@ -31,6 +34,7 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 /* utilities */
@@ -97,7 +101,11 @@ img {
 .btn-clr {
   background-color: var(--accent--primary);
   color: var(--clr--light);
+
+  position: relative;
+  z-index: 1;
 }
+
 .btn-light {
   background-color: var(--clr--light);
   color: var(--accent--primary);
@@ -109,13 +117,45 @@ img {
 .btn-light::after {
   content: '';
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--accent--primary);
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   border-radius: 3rem;
   z-index: -1;
+  transform: scale(0);
+  transition: transform 200ms ease-in, color 200ms ease-in 200ms;
+}
+
+.btn-light:hover {
+  color: var(--clr--light);
+}
+
+.btn-light:hover::after {
+  transform: scale(1);
+}
+
+.btn-clr::after {
+  content: '';
+  position: absolute;
+  background-color: var(--clr--light);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 3rem;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 200ms ease-in, color 200ms ease-in 200ms;
+}
+
+.btn-clr:hover {
+  color: var(--accent--primary);
+}
+
+.btn-clr:hover::after {
+  transform: scale(1);
 }
 
 .section-b .fa-solid {
@@ -214,7 +254,6 @@ img {
 .section-b {
   padding: var(--section--padding) 0;
   text-align: center;
-  color: var(--clr--primary);
 }
 
 .section-b .brands {

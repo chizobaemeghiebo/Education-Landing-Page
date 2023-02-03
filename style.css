@@ -20,6 +20,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: var(--font-size);
   color: var(--text-clr);
+  overflow-x: hidden;
 }
 
 /* general */
@@ -704,7 +705,6 @@ img {
   }
 
   .nav.flex ul {
-    display: block;
     background-color: var(--clr--light);
     opacity: 0;
     top: 0;
@@ -787,6 +787,10 @@ img {
   .news .container2 .g-1,
   .news .container2 .g-2 {
     width: 100%;
+  }
+
+  .news .container2 li.flex p {
+    font-size: 1rem;
   }
 
   .logo {

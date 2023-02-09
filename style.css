@@ -683,7 +683,8 @@ img {
   }
 
   .section-a .text {
-    width: 80%;
+    width: 50%;
+    margin-right: 5rem;
   }
 
   .section-a img {
@@ -691,7 +692,14 @@ img {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media (min-width: 601px) and (max-width: 800px) {
+  .section-a .text {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .header .menu {
     position: absolute;
     opacity: 1;
@@ -735,6 +743,7 @@ img {
 
   .section-a .text {
     width: 100%;
+    margin-right: 0;
   }
   .section-a .cta {
     gap: 1rem;
